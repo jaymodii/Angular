@@ -1,0 +1,16 @@
+
+<input  type="text" [(ngModel)]="name">
+<p> Wel Come {{name}}</p>
+<button (click)="name=''" mat-raised-button [disabled]="name===''" >click me!!</button>
+<button (click)="onClick()">Display Details</button>
+<p *ngIf="flag">T1</p>
+<p *ngIf="!flag">T2</p>
+
+<hr>
+<p *ngFor="let log of logs;let i=index"
+[ngStyle]="{backgroundColor:i>=5?'blue':'transperent'}"
+[ngClass]="{whiteText:i>=5}"
+>
+
+  Button is clicked {{log}} times.
+</p>
